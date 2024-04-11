@@ -9,10 +9,34 @@
 
 #ifndef USER_LIST_H
 #define USER_LIST_H
+#define NULLU ((tPosU)NULL)
 
-#include "types.h"
-#include "song_list.h"
+#include <stdbool.h>
 
-/* Write your code here... */
+typedef char* tUserName;
+typedef int tPlayTime;
+typedef char* tUserCategory;
+typedef void* tListS;
+
+typedef struct {
+    tUserName user_name;
+    tPlayTime play_time;
+    tUserCategory user_category;
+    tListS song_list;
+}tItemU;
+
+typedef struct {
+    tItemU* items;
+    int size;
+    int capacity;
+} tListU;
+
+
+bool insertItemU(tItemU item, tListU* list);
+void deleteAtPositioU(int pos, tListU* list);
+int findItemU(tUserName user_name, tListU list);
 
 #endif
+
+
+

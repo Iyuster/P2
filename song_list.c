@@ -8,5 +8,8 @@
  */
 
 #include "song_list.h"
+#include <stdio.h>
+
+
 
 /* Write your code here... */

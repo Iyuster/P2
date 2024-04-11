@@ -8,6 +8,15 @@
  */
 
 #include "user_list.h"
-#include "song_list.h"
+#include <stdlib.h>
+#include <string.h>
 
+bool insterItemU(tItemU item, tListU* list_u) {
+    if (list_u->size == list->capacity) {
+        int newCapacity = list->capacity == 0 ? 4 : list->capacity * 2;
+        tItemU* newItems = realloc()
+    }
+
+
+};
 /* Write your code here... */
